@@ -1,0 +1,39 @@
+// COMMON :: START
+
+.copyright {
+  display: flex;
+  justify-content: center;
+  padding-bottom: 15px;
+
+  &__text {
+    font-weight: 300;
+    font-size: 14px;
+    text-align: center;
+    color: #000;
+
+    strong {
+      font-weight: 700;
+    }
+  }
+}
+
+.made {
+  display: flex;
+  justify-content: center;
+  padding-bottom: 15px;
+
+  &__text {
+    font-weight: 300;
+    font-size: 14px;
+    text-align: center;
+    color: #000;
+
+    a {
+      font-weight: 700;
+      color: #000000;
+      @include hoverState(#000);
+    }
+  }
+}
+
+// COMMON :: END
