@@ -1,0 +1,39 @@
+// SECTION :: START
+
+.meet {
+  position: relative;
+  background-repeat: no-repeat;
+  background-position: center;
+  background-size: cover;
+
+  &__wrapper {
+    z-index: 2;
+    position: relative;
+    display: flex;
+    padding-top: 120px;
+    padding-bottom: 150px;
+
+    > div {
+      width: 100%;
+      max-width: 50%;
+      margin-left: auto;
+    }
+  }
+
+  &__label,
+  &__title,
+  &__desc {
+    text-align: left;
+  }
+
+  &__title {
+    padding-bottom: 50px;
+  }
+
+  &__desc {
+    max-width: 565px;
+    padding-bottom: 50px;
+  }
+}
+
+// SECTION :: END
