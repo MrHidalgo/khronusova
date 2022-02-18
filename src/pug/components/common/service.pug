@@ -1,0 +1,26 @@
+// SECTION :: START
+
+section#service.service
+
+  .service__bg
+
+  .c-grid-fluid
+    .service__wrapper
+
+      .service__carousel
+        .swiper
+          .swiper-wrapper
+            each val, idx in [1,2,3,4,5]
+              .swiper-slide
+
+                .service__box
+                  img.service__box-watermark(src='img/img-watermark.svg')
+                  p.service__box-label.c-label Our NEWEST Service
+                  p.service__box-title.c-title.c-title--small Emsculpt
+                  p.service__box-desc.c-desc At our boutique practice in Las Vegas, EMSculpt is one of our most popular procedures. EMSCULPT NEO supports fat burning and muscle building simultaneously, making it ideal for sculpting and contouring the body. This procedure is also non-invasive, which is an advantage for many patients hoping to tone their bodies without downtime and scars. Through High-Intensity Focused Electromagnetic (HIFEM) technology, EMSCULPT NEO induces supramaximal muscle contractions.
+
+                  .c-btn__wrapper.c-btn__wrapper--center
+                    a.c-btn(href="#") LEARN MORE
+
+
+// SECTION :: END

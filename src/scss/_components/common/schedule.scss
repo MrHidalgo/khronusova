@@ -1,0 +1,38 @@
+// SECTION :: START
+
+.schedule {
+  background-image: url('../img/img-schedule-bg.jpg');
+  background-repeat: no-repeat;
+  background-position: center;
+  background-size: cover;
+
+  &__wrapper {
+    padding-top: 220px;
+    padding-bottom: 340px;
+  }
+
+  &__title {
+    position: relative;
+    text-transform: uppercase;
+    text-align: left;
+
+    &:before {
+      content: '';
+      z-index: 0;
+      position: absolute;
+      top: 0;
+      left: 0;
+      transform: translate(-50%, -25%);
+      width: 307px;
+      height: 270px;
+      background-color: #ccc6b8;
+    }
+
+    span {
+      z-index: 2;
+      position: relative;
+    }
+  }
+}
+
+// SECTION :: END

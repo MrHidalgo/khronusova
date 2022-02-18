@@ -1,0 +1,75 @@
+// SECTION :: START
+
+.service {
+  position: relative;
+
+  .c-grid-fluid {
+    padding-left: 0;
+    padding-right: 0;
+  }
+
+  &__bg {
+    z-index: 0;
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: calc(90% - 250px);
+    background-image: url('../img/img-pattern.jpg');
+    background-repeat: no-repeat;
+    background-position: center;
+    background-size: cover;
+  }
+
+  &__wrapper {
+    z-index: 2;
+    position: relative;
+    padding-top: 70px
+  }
+
+  &__carousel {
+    .swiper {
+      padding-top: 100px;
+      padding-bottom: 100px;
+
+      &-slide {
+        width: 800px !important;
+      }
+    }
+  }
+
+  &__box {
+    position: relative;
+    display: flex;
+    align-items: center;
+    flex-direction: column;
+    width: 100%;
+    min-height: 100%;
+    padding: 150px 115px 90px;
+    box-shadow: 5px 3px 25px 0 rgba(0, 0, 0, 0.16);
+    background-color: #fff;
+
+    &-watermark {
+      position: absolute;
+      top: 0;
+      left: 0;
+      right: 0;
+      transform: translateY(-50%);
+      display: block;
+      max-width: 140px;
+      height: auto;
+      margin-left: auto;
+      margin-right: auto;
+    }
+
+    &-title {
+      padding-bottom: 50px;
+    }
+
+    &-desc {
+      padding-bottom: 50px;
+    }
+  }
+}
+
+// SECTION :: END

@@ -1,0 +1,39 @@
+// SECTION :: START
+
+.patient-resources {
+  padding-top: 150px;
+  padding-bottom: 150px;
+
+  &__title {
+    padding-bottom: 50px;
+  }
+
+  &__desc {
+    width: 100%;
+    max-width: 670px;
+    margin-left: auto;
+    margin-right: auto;
+    padding-bottom: 70px;
+  }
+
+  &__link {
+    display: flex;
+    align-items: center;
+    justify-content: space-around;
+
+    a {
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      font-weight: bold;
+      font-size: 22px;
+      letter-spacing: 0.1em;
+      text-align: center;
+      color: #8dc4c4;
+      text-transform: uppercase;
+      @include hoverState(#8dc4c4);
+    }
+  }
+}
+
+// SECTION :: END

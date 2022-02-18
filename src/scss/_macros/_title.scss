@@ -1,12 +1,21 @@
 // TITLE :: START
 
 .c-title {
-  &__text {
-    &-wrap {}
-  }
+  @extend %fontPlayfairDisplay;
+  font-weight: normal;
+  font-size: 60px;
+  line-height: 1;
+  text-align: center;
+  color: #000;
 
-  &__icon {
-    &-wrap {}
+  &.c-title--big {
+    font-size: 140px;
+  }
+  &.c-title--small {
+    font-size: 40px;
+  }
+  &.c-title--white {
+    color: #ffffff;
   }
 }
 

@@ -103,6 +103,34 @@ __webpack_require__.r(__webpack_exports__);
 window.addEventListener('load', function (ev) {
   // COMMON
   _common_common__WEBPACK_IMPORTED_MODULE_0__["default"].initLoad(); // MACROS
+
+  var reviewsCarousel = function reviewsCarousel() {
+    new Swiper('.reviews__carousel .swiper', {
+      loop: true,
+      speed: 1250,
+      navigation: {
+        nextEl: '.reviews__btn--next',
+        prevEl: '.reviews__btn--prev'
+      }
+    });
+  };
+
+  var serviceCarousel = function serviceCarousel() {
+    new Swiper('.service__carousel .swiper', {
+      autoplay: {
+        delay: 10000
+      },
+      freeMode: true,
+      grabCursor: true,
+      speed: 1250,
+      slidesPerView: 'auto',
+      spaceBetween: 50,
+      slidesOffsetBefore: 100
+    });
+  };
+
+  reviewsCarousel();
+  serviceCarousel();
 }, false); // EVENT LISTENER - SCROLL
 // ========================================
 

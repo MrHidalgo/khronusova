@@ -1,0 +1,40 @@
+// SECTION :: START
+
+section#reviews.reviews
+
+  .reviews__bg(style='background-image:url("img/img-reviews-bg.jpg")')
+
+  .c-grid
+    .reviews__wrapper
+      div
+
+        h2.reviews__title.c-title.c-title--big.c-title--white REVIEWS
+
+        .reviews__box
+
+          .reviews__carousel
+            .swiper
+              .swiper-wrapper
+                each val, idx in [1,2,3,4,5]
+                  .swiper-slide
+                    .reviews__rating
+                      i.icon-font.icon-star-fill
+                      i.icon-font.icon-star-fill
+                      i.icon-font.icon-star-fill
+                      i.icon-font.icon-star-fill
+                      i.icon-font.icon-star-fill
+
+                    p.reviews__desc.c-desc "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Maecenas at velit vel est vestibulum scelerisque ut ut est. Nunc quis venenatis ante, eu scelerisque nunc. Integer suscipit rutrum quam, sit amet scelerisque nunc eleifend eget. Cras feugiat orci id lacus pharetra facilisis non ac neque. Sed pellentesque nisi in mi sollicitudin interdum. Aliquam erat volutpat. Praesent blandit lacinia ultricies. Fusce faucibus urna aliquam tortor vestibulum auctor ut at sem. Sed vitae malesuada leo, sed luctus justo. Integer a semper mauris. Ut neque diam, porta et aliquam ac, dictum nec lacus. Nulla vestibulum a ligula imperdiet cursus."
+                    p.reviews__name - Debra
+
+          a.reviews__more(href="#")
+            p.c-title.c-title--white.c-title--small Patient Stories
+            span read more
+
+          a.reviews__btn.reviews__btn--prev(href='#')
+            i.icon-font.icon-arrow-left
+          a.reviews__btn.reviews__btn--next(href='#')
+            i.icon-font.icon-arrow-right
+
+
+// SECTION :: END
