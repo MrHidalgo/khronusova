@@ -17,7 +17,7 @@
 }
 
 .c-title {
-  font-family: "playfair-display", serif;
+  font-family: playfair-display, serif;
 }
 
 @font-face {
@@ -81,7 +81,7 @@ body {
   font-size: 14px;
   font-weight: normal;
   letter-spacing: 0.02em;
-  font-family: "Muli", sans-serif;
+  font-family: proxima-nova, muli, sans-serif;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
 }
