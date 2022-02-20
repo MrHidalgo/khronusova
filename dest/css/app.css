@@ -1555,6 +1555,18 @@ picture {
   padding-top: 150px;
   padding-bottom: 150px;
 }
+@media screen and (max-width: 1535px) {
+  .patient-resources {
+    padding-top: 125px;
+    padding-bottom: 125px;
+  }
+}
+@media screen and (max-width: 1279px) {
+  .patient-resources {
+    padding-top: 100px;
+    padding-bottom: 100px;
+  }
+}
 .patient-resources__title {
   padding-bottom: 50px;
 }
@@ -1565,6 +1577,11 @@ picture {
   margin-right: auto;
   padding-bottom: 70px;
 }
+@media screen and (max-width: 767px) {
+  .patient-resources__desc {
+    padding-bottom: 50px;
+  }
+}
 .patient-resources__link {
   display: -webkit-box;
   display: -ms-flexbox;
@@ -1574,6 +1591,14 @@ picture {
           align-items: center;
   -ms-flex-pack: distribute;
       justify-content: space-around;
+}
+@media screen and (max-width: 767px) {
+  .patient-resources__link {
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: column;
+            flex-direction: column;
+  }
 }
 .patient-resources__link a {
   display: -webkit-box;
@@ -1615,4 +1640,19 @@ picture {
 }
 .patient-resources__link a:after {
   right: 50%;
+}
+@media screen and (max-width: 1279px) {
+  .patient-resources__link a {
+    font-size: 20px;
+  }
+}
+@media screen and (max-width: 1023px) {
+  .patient-resources__link a {
+    font-size: 18px;
+  }
+}
+@media screen and (max-width: 767px) {
+  .patient-resources__link a:not(:last-of-type) {
+    margin-bottom: 25px;
+  }
 }
