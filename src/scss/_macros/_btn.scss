@@ -12,12 +12,32 @@
   height: 60px;
   padding-left: 20px;
   padding-right: 20px;
+  border: 2px solid #d015a5;
   background-color: #d015a5;
   text-transform: uppercase;
   font-weight: bold;
   font-size: 18px;
   text-align: center;
   color: #fff;
+  @include transition(background-color, color);
+  @include adaptive(767) {
+    height: 50px;
+    padding-left: 15px;
+    padding-right: 15px;
+    font-size: 16px;
+  }
+
+  &:hover {
+    background-color: transparent;
+    color: #d015a5;
+    @include transition(background-color, color);
+
+    &:after {
+      opacity: 0.5;
+      transform: translate(0, 0);
+      @include transition(opacity, transform);
+    }
+  }
 
   &:after {
     content: '';
@@ -29,12 +49,16 @@
     width: 100%;
     height: 100%;
     background-color: #ffffff;
+    @include transition(opacity, transform);
   }
 
   &__wrapper {
     display: flex;
     align-items: center;
     width: 100%;
+    @include adaptive(767) {
+      justify-content: center;
+    }
 
     &--center {
       justify-content: center;

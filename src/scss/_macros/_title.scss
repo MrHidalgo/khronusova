@@ -10,14 +10,8 @@
   @include adaptive(1535) {
     font-size: 50px;
   }
-  @include adaptive(1365) {
-    font-size: 40px;
-  }
-  @include adaptive(1023) {
-    font-size: 35px;
-  }
   @include adaptive(767) {
-    font-size: 30px;
+    font-size: 35px;
   }
 
   &.c-title--big {
@@ -28,20 +22,17 @@
     @include adaptive(1365) {
       font-size: 100px;
     }
-    @include adaptive(1023) {
-      font-size: 40px;
+    @include adaptive(1279) {
+      font-size: 50px;
     }
     @include adaptive(767) {
-      font-size: 30px;
+      font-size: 35px;
     }
   }
   &.c-title--small {
     font-size: 40px;
-    @include adaptive(1023) {
-      font-size: 35px;
-    }
     @include adaptive(767) {
-      font-size: 30px;
+      font-size: 35px;
     }
   }
 
