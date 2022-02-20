@@ -9,6 +9,13 @@
   &__wrapper {
     padding-top: 220px;
     padding-bottom: 340px;
+    @include adaptive(1919) {
+      padding-bottom: 220px;
+    }
+    @include adaptive(1365) {
+      padding-top: 175px;
+      padding-bottom: 175px;
+    }
   }
 
   &__title {
@@ -26,6 +33,10 @@
       width: 307px;
       height: 270px;
       background-color: #ccc6b8;
+      @include adaptive(1279) {
+        width: 200px;
+        height: 175px;
+      }
     }
 
     span {

@@ -4,37 +4,65 @@
   position: relative;
   padding-top: 125px;
   padding-bottom: 250px;
+  @include adaptive(767) {
+    padding-top: 100px;
+    padding-bottom: 150px;
+  }
 
   &__bg {
     z-index: 0;
     position: absolute;
     top: 125px;
     left: 0;
-    width: 85%;
+    width: calc(100% - 300px);
     height: calc(80% - 125px);
     background-repeat: no-repeat;
     background-position: center;
     background-size: cover;
+    @include adaptive(767) {
+      opacity: 0.75;
+      width: 100%;
+      height: calc(70% - 100px);
+      background-position: -300px center;
+    }
   }
 
   &__wrapper {
     z-index: 2;
     position: relative;
     display: flex;
-    justify-content: flex-end;
-    padding-top: 110px;
+    flex-direction: column;
+    align-items: flex-end;
+    padding-right: 40px;
+    @include adaptive(767) {
+      padding-right: 0;
+    }
 
     > div {
       width: 100%;
       max-width: 55%;
+      @include adaptive(1279) {
+        max-width: 75%;
+      }
+      @include adaptive(767) {
+        max-width: 100%;
+      }
     }
   }
 
   &__title {
-    padding-bottom: 110px;
-    padding-left: 50px;
+    z-index: 2;
+    position: relative;
+    width: calc(100% - 300px);
+    margin-right: auto;
+    padding: 110px 100px 110px 0;
     text-transform: uppercase;
-    text-align: left;
+    text-align: right;
+    @include adaptive(767) {
+      width: 100%;
+      padding: 100px 20px 50px;
+      text-align: center;
+    }
   }
 
   &__box {
@@ -47,6 +75,16 @@
     padding: 80px 140px 0;
     box-shadow: 5px 3px 25px 0 rgba(0, 0, 0, 0.16);
     background-color: #fff;
+    @include adaptive(1365) {
+      padding: 40px 100px 0;
+    }
+    @include adaptive(1012) {
+      padding-left: 50px;
+      padding-right: 50px;
+    }
+    @include adaptive(767) {
+      padding-top: 20px;
+    }
   }
 
   &__btn {
@@ -58,7 +96,24 @@
     justify-content: center;
     width: 83px;
     height: 83px;
+    border-radius: 0;
+    border: 2px solid #d015a5;
+    box-shadow: none;
     background-color: #d015a5;
+    @include adaptive(1279) {
+      width: 63px;
+      height: 63px;
+    }
+
+    &:hover {
+      background-color: rgba(#fff, 0.75);
+      @include transition(background-color);
+
+      .icon-font {
+        color: #d015a5;
+        @include transition(color);
+      }
+    }
 
     &--prev {
       left: 0;
@@ -72,6 +127,10 @@
     .icon-font {
       font-size: 30px;
       color: #ffffff;
+      @include transition(color);
+      @include adaptive(1279) {
+        font-size: 25px;
+      }
     }
   }
 
@@ -84,6 +143,9 @@
     align-items: center;
     justify-content: center;
     padding-bottom: 45px;
+    @include adaptive(767) {
+      padding-bottom: 25px;
+    }
 
     .icon-font {
       margin-left: 5px;
@@ -125,6 +187,21 @@
     background-repeat: no-repeat;
     background-position: center;
     background-size: cover;
+    @include adaptive(1365) {
+      min-height: 175px;
+    }
+    @include adaptive(767) {
+      min-height: 150px;
+    }
+
+    &:hover {
+      span {
+        &:after {
+          width: 100px;
+          @include transition(width);
+        }
+      }
+    }
 
     p {
       padding-bottom: 20px;
@@ -137,6 +214,9 @@
       font-size: 18px;
       text-align: left;
       color: #fff;
+      @include adaptive(1279) {
+        font-size: 16px;
+      }
 
       &:after {
         content: '';
@@ -149,6 +229,7 @@
         margin-left: auto;
         margin-right: auto;
         background-color: #d010a5;
+        @include transition(width);
       }
     }
   }
