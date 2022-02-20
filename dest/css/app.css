@@ -1091,12 +1091,37 @@ picture {
   position: relative;
   padding-top: 70px;
 }
+@media screen and (max-width: 767px) {
+  .service__wrapper {
+    padding-top: 25px;
+  }
+}
 .service__carousel .swiper {
   padding-top: 100px;
   padding-bottom: 100px;
 }
 .service__carousel .swiper-slide {
   width: 800px !important;
+}
+@media screen and (max-width: 1535px) {
+  .service__carousel .swiper-slide {
+    width: 700px !important;
+  }
+}
+@media screen and (max-width: 1439px) {
+  .service__carousel .swiper-slide {
+    width: 600px !important;
+  }
+}
+@media screen and (max-width: 1279px) {
+  .service__carousel .swiper-slide {
+    width: 500px !important;
+  }
+}
+@media screen and (max-width: 767px) {
+  .service__carousel .swiper-slide {
+    width: calc(100% - 80px) !important;
+  }
 }
 .service__box {
   position: relative;
@@ -1117,6 +1142,29 @@ picture {
           box-shadow: 5px 3px 25px 0 rgba(0, 0, 0, 0.16);
   background-color: #fff;
 }
+@media screen and (max-width: 1535px) {
+  .service__box {
+    padding-left: 90px;
+    padding-right: 90px;
+  }
+}
+@media screen and (max-width: 1439px) {
+  .service__box {
+    padding-left: 75px;
+    padding-right: 75px;
+    padding-bottom: 75px;
+  }
+}
+@media screen and (max-width: 1279px) {
+  .service__box {
+    padding: 100px 50px 50px;
+  }
+}
+@media screen and (max-width: 767px) {
+  .service__box {
+    padding: 50px 20px 25px;
+  }
+}
 .service__box-watermark {
   position: absolute;
   top: 0;
@@ -1131,11 +1179,31 @@ picture {
   margin-left: auto;
   margin-right: auto;
 }
+@media screen and (max-width: 1365px) {
+  .service__box-watermark {
+    max-width: 100px;
+  }
+}
+@media screen and (max-width: 767px) {
+  .service__box-watermark {
+    max-width: 50px;
+  }
+}
 .service__box-title {
   padding-bottom: 50px;
 }
+@media screen and (max-width: 767px) {
+  .service__box-title {
+    padding-bottom: 25px;
+  }
+}
 .service__box-desc {
   padding-bottom: 50px;
+}
+@media screen and (max-width: 767px) {
+  .service__box-desc {
+    padding-bottom: 25px;
+  }
 }
 
 .reviews {

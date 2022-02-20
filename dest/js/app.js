@@ -125,7 +125,17 @@ window.addEventListener('load', function (ev) {
       speed: 1250,
       slidesPerView: 'auto',
       spaceBetween: 50,
-      slidesOffsetBefore: 100
+      slidesOffsetBefore: 100,
+      breakpoints: {
+        320: {
+          spaceBetween: 25,
+          slidesOffsetBefore: 50
+        },
+        768: {
+          spaceBetween: 50,
+          slidesOffsetBefore: 100
+        }
+      }
     });
   };
 
