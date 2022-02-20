@@ -325,7 +325,12 @@ picture {
 }
 @media screen and (max-width: 1279px) {
   .c-title.c-title--big {
-    font-size: 50px;
+    font-size: 80px;
+  }
+}
+@media screen and (max-width: 1023px) {
+  .c-title.c-title--big {
+    font-size: 60px;
   }
 }
 @media screen and (max-width: 767px) {
@@ -902,6 +907,13 @@ picture {
   width: 100%;
   height: 100%;
 }
+@media screen and (max-width: 767px) {
+  .gallery__bg-cover {
+    opacity: 0.75;
+    -o-object-position: -200px center;
+       object-position: -200px center;
+  }
+}
 .gallery__bg:after {
   content: "";
   position: absolute;
@@ -911,6 +923,16 @@ picture {
   height: 230px;
   background-color: #ffffff;
 }
+@media screen and (max-width: 1279px) {
+  .gallery__bg:after {
+    width: 50%;
+  }
+}
+@media screen and (max-width: 1023px) {
+  .gallery__bg:after {
+    display: none;
+  }
+}
 .gallery__bg > div {
   position: absolute;
   left: 0;
@@ -918,6 +940,16 @@ picture {
   width: 100%;
   max-width: 64%;
   height: 100%;
+}
+@media screen and (max-width: 1279px) {
+  .gallery__bg > div {
+    max-width: 40%;
+  }
+}
+@media screen and (max-width: 1023px) {
+  .gallery__bg > div {
+    display: none;
+  }
 }
 .gallery__bg > div > div {
   z-index: 2;
@@ -930,6 +962,18 @@ picture {
   bottom: 0;
   width: 680px;
   height: 500px;
+}
+@media screen and (max-width: 1439px) {
+  .gallery__bg > div > div {
+    width: 580px;
+    height: 400px;
+  }
+}
+@media screen and (max-width: 1279px) {
+  .gallery__bg > div > div {
+    left: 20px;
+    width: 100%;
+  }
 }
 .gallery__bg > div > div img {
   position: absolute;
@@ -954,6 +998,18 @@ picture {
   padding-top: 150px;
   padding-bottom: 150px;
 }
+@media screen and (max-width: 1439px) {
+  .gallery__wrapper {
+    padding-top: 125px;
+    padding-bottom: 125px;
+  }
+}
+@media screen and (max-width: 767px) {
+  .gallery__wrapper {
+    padding-top: 100px;
+    padding-bottom: 100px;
+  }
+}
 .gallery__title {
   display: -webkit-box;
   display: -ms-flexbox;
@@ -965,9 +1021,27 @@ picture {
   text-align: right;
   text-transform: uppercase;
 }
+@media screen and (max-width: 1279px) {
+  .gallery__title {
+    padding-bottom: 230px;
+  }
+}
+@media screen and (max-width: 767px) {
+  .gallery__title {
+    -webkit-box-pack: center;
+        -ms-flex-pack: center;
+            justify-content: center;
+    padding-bottom: 100px;
+  }
+}
 .gallery__title p {
   position: relative;
   padding: 20px 50px 50px;
+}
+@media screen and (max-width: 767px) {
+  .gallery__title p {
+    padding-bottom: 20px;
+  }
 }
 .gallery__title p:before, .gallery__title p:after {
   content: "";

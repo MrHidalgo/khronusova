@@ -23,7 +23,10 @@
       font-size: 100px;
     }
     @include adaptive(1279) {
-      font-size: 50px;
+      font-size: 80px;
+    }
+    @include adaptive(1023) {
+      font-size: 60px;
     }
     @include adaptive(767) {
       font-size: 35px;
