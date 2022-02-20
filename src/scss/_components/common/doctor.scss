@@ -4,6 +4,18 @@
   position: relative;
   padding-top: 150px;
   padding-bottom: 150px;
+  @include adaptive(1535) {
+    padding-top: 125px;
+    padding-bottom: 125px;
+  }
+  @include adaptive(1279) {
+    padding-top: 100px;
+    padding-bottom: 100px;
+  }
+  @include adaptive(767) {
+    padding-top: 50px;
+    padding-bottom: 50px;
+  }
 
   &__bg {
     z-index: 0;
@@ -22,8 +34,10 @@
   }
 
   &__wrapper {
+    z-index: 2;
+    position: relative;
     width: 100%;
-    max-width: 640px;
+    max-width: 650px;
     margin-left: auto;
     margin-right: auto;
   }
@@ -41,6 +55,9 @@
 
     &:last-of-type {
       padding-bottom: 50px;
+      @include adaptive(767) {
+        padding-bottom: 25px;
+      }
     }
   }
 
@@ -56,6 +73,19 @@
     text-align: center;
     color: #000;
     text-transform: uppercase;
+    @include adaptive(1365) {
+      font-size: 16px;
+    }
+    @include adaptive(767) {
+      font-size: 14px;
+    }
+
+    &:hover {
+      &:after {
+        width: 100px;
+        @include transition(width);
+      }
+    }
 
     &:after {
       content: '';
@@ -68,6 +98,10 @@
       background-color: #d010a5;
       margin-left: auto;
       margin-right: auto;
+      @include transition(width);
+      @include adaptive(1279) {
+        top: calc(100% + 10px);
+      }
     }
   }
 }

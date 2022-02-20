@@ -7,13 +7,44 @@
   line-height: 1;
   text-align: center;
   color: #000;
+  @include adaptive(1535) {
+    font-size: 50px;
+  }
+  @include adaptive(1365) {
+    font-size: 40px;
+  }
+  @include adaptive(1023) {
+    font-size: 35px;
+  }
+  @include adaptive(767) {
+    font-size: 30px;
+  }
 
   &.c-title--big {
     font-size: 140px;
+    @include adaptive(1535) {
+      font-size: 120px;
+    }
+    @include adaptive(1365) {
+      font-size: 100px;
+    }
+    @include adaptive(1023) {
+      font-size: 40px;
+    }
+    @include adaptive(767) {
+      font-size: 30px;
+    }
   }
   &.c-title--small {
     font-size: 40px;
+    @include adaptive(1023) {
+      font-size: 35px;
+    }
+    @include adaptive(767) {
+      font-size: 30px;
+    }
   }
+
   &.c-title--white {
     color: #ffffff;
   }

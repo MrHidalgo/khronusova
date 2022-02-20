@@ -6,6 +6,9 @@
   line-height: 38px;
   text-align: center;
   color: #000;
+  @include adaptive(1365) {
+    font-size: 14px;
+  }
 }
 
 // DESC :: END
