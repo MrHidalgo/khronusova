@@ -1,0 +1,39 @@
+// SECTION :: START
+
+section#portfolio.portfolio
+
+  .portfolio__carousel
+    .swiper
+      .swiper-wrapper
+        each val, idx in [1,2,3]
+          .swiper-slide
+            .portfolio__box
+              img(src="img/img-portfolio-1.jpg" alt="")
+              p WELLNESS
+          .swiper-slide
+            .portfolio__box
+              img(src="img/img-portfolio-2.jpg" alt="")
+              p FACE
+          .swiper-slide
+            .portfolio__box
+              img(src="img/img-portfolio-3.jpg" alt="")
+              p BODY
+
+    .portfolio__navigation-wrapper
+      a.portfolio__navigation.portfolio__navigation--prev(href="#")
+        i.icon-font.icon-arrow-left
+      a.portfolio__navigation.portfolio__navigation--next(href="#")
+        i.icon-font.icon-arrow-right
+
+  .c-grid
+    .portfolio__wrapper
+      p.portfolio__desc.c-desc Lorem ipsum dolor sit amet, consectetur adipiscing elit. Vivamus luctus purus nisl, vitae dictum eros porttitor eget. Duis justo eros, feugiat egestas ipsum non, tempor placerat libero. Maecenas accumsan ullamcorper convallis. Aliquam turpis dui, consequat sed magna vitae, molestie finibus magna. Nulla cursus auctor lorem ut tempus. Suspendisse interdum molestie risus, vel pulvinar orci lobortis laoreet.
+
+      nav.portfolio__nav
+        a(href="#") BOTOX
+        a(href="#") THREADS
+        a(href="#") DOUBLE CHIN
+        a(href="#") PRF FACIAL
+        a(href="#") MORE SERVICES
+
+// SECTION :: END

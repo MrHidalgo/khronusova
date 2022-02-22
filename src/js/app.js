@@ -11,6 +11,9 @@ window.addEventListener('load', (ev) => {
   // MACROS
   const reviewsCarousel = () => {
     new Swiper('.reviews__carousel .swiper', {
+      autoplay: {
+        delay: 10000,
+      },
       loop: true,
       speed: 1250,
       navigation: {
@@ -19,6 +22,7 @@ window.addEventListener('load', (ev) => {
       }
     });
   };
+
   const serviceCarousel = () => {
     new Swiper('.service__carousel .swiper', {
       autoplay: {
@@ -43,8 +47,37 @@ window.addEventListener('load', (ev) => {
     });
   };
 
+  const portfolioCarousel = () => {
+    new Swiper('.portfolio__carousel .swiper', {
+      autoplay: {
+        delay: 10000,
+      },
+      speed: 1250,
+      slidesPerView: 3,
+      spaceBetween: 50,
+      navigation: {
+        nextEl: '.portfolio__navigation--next',
+        prevEl: '.portfolio__navigation--prev',
+      },
+      breakpoints: {
+        320: {
+          slidesPerView: 1,
+          spaceBetween: 25,
+        },
+        768: {
+          slidesPerView: 2,
+          spaceBetween: 50,
+        },
+        1280: {
+          slidesPerView: 3,
+        }
+      }
+    });
+  };
+
   reviewsCarousel();
   serviceCarousel();
+  portfolioCarousel();
 
 }, false);
 
