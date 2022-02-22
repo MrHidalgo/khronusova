@@ -4,6 +4,16 @@
   display: flex;
   align-items: center;
 
+  &.logo--header {
+    height: 70px;
+
+    .logo {
+      &__btn {
+        height: 100%;
+      }
+    }
+  }
+
   &__btn {
     display: flex;
     align-items: flex-start;
