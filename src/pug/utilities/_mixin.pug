@@ -4,4 +4,23 @@ include ./_mixin/_hamburger
 include ./_mixin/_swiper
 include ./_mixin/_modal
 
+mixin mainSection(classMod, img, title, breadcrumbsArr)
+  main#main.main(class!="main--" + classMod)
+    .main__bg
+      img(src!="img/" + img alt="")
+    .main__wrapper
+      if(classMod === 'home')
+        .main__content
+          h1.main__title.c-title.c-title--white Las Vegas’s Most Popular Body Wellness Center
+          p.main__subtitle STATE-OF-THE-ART TECHNOLOGIES AESTHETIC SERVICES & BODY SHAPING
+      else
+        .main__content
+          h1.main__title.c-title.c-title--white!= title
+          .main__breadcrumbs
+            each val, idx in breadcrumbsArr
+              if(idx === breadcrumbsArr.length - 1)
+                p!= val
+              else
+                a(href="#")!= val
+
 //- MIXIN :: END

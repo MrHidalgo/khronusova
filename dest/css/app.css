@@ -4,7 +4,7 @@
   margin-left: auto;
 }
 
-.gallery__bg-cover, .doctor__bg img {
+.gallery__bg-cover, .doctor__bg img, .main__bg img {
   position: absolute;
   top: 0;
   left: 0;
@@ -696,6 +696,109 @@ picture {
 }
 .footer__address-tel:after {
   right: 50%;
+}
+
+.main {
+  position: relative;
+}
+.main__bg {
+  z-index: 0;
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+}
+.main__bg:after {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-color: rgba(0, 0, 0, 0.35);
+}
+.main__wrapper {
+  z-index: 2;
+  position: relative;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  width: 100%;
+  height: 100vh;
+  padding-left: 20px;
+  padding-right: 20px;
+}
+.main__content {
+  width: 100%;
+}
+.main__title {
+  padding-bottom: 50px;
+}
+.main__subtitle {
+  font-size: 22px;
+  letter-spacing: 0.15em;
+  text-align: center;
+  text-transform: uppercase;
+  color: #fff;
+}
+@media screen and (max-width: 767px) {
+  .main__subtitle {
+    font-size: 18px;
+  }
+}
+.main__breadcrumbs {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+}
+@media screen and (max-width: 767px) {
+  .main__breadcrumbs {
+    -ms-flex-wrap: wrap;
+        flex-wrap: wrap;
+  }
+}
+.main__breadcrumbs a,
+.main__breadcrumbs p {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  padding-left: 2px;
+  padding-right: 2px;
+  text-transform: uppercase;
+  letter-spacing: 0.1em;
+  text-align: center;
+}
+.main__breadcrumbs a {
+  color: #ffffff;
+  -webkit-transition: color 0.3s ease-in-out;
+  -o-transition: color 0.3s ease-in-out;
+  transition: color 0.3s ease-in-out;
+}
+.main__breadcrumbs a:hover {
+  color: #c39d48;
+  -webkit-transition: color 0.3s ease-in-out;
+  -o-transition: color 0.3s ease-in-out;
+  transition: color 0.3s ease-in-out;
+}
+.main__breadcrumbs a:nth-of-type(2n) {
+  pointer-events: none;
+}
+.main__breadcrumbs p {
+  font-weight: 900;
+  color: #fff;
 }
 
 .doctor {
