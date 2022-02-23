@@ -2,7 +2,7 @@
 
 .header {
   z-index: 9999;
-  position: fixed;
+  position: absolute;
   top: 0;
   left: 0;
   width: 100%;
@@ -17,27 +17,6 @@
       &__request {
         opacity: 0;
         @include transition(opacity);
-      }
-    }
-
-    .logo {
-      &.logo--header {
-        .logo {
-          &__img {
-            &:nth-of-type(2) {
-              opacity: 1;
-              @include transition(opacity);
-            }
-          }
-        }
-      }
-    }
-
-    .hamburger {
-      .hamburger-inner,
-      .hamburger-inner::before,
-      .hamburger-inner::after {
-        background-color: #000;
       }
     }
   }

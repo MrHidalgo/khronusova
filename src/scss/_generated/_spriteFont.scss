@@ -33,8 +33,11 @@
 	@if $filename == arrow-right {
 		$char: "\E002";
 	}
-	@if $filename == star-fill {
+	@if $filename == corner {
 		$char: "\E003";
+	}
+	@if $filename == star-fill {
+		$char: "\E004";
 	}
 
 	@return $char;
@@ -57,6 +60,10 @@
 }
 .icon-arrow-right {
 	@include icon(arrow-right);
+
+}
+.icon-corner {
+	@include icon(corner);
 
 }
 .icon-star-fill {

@@ -104,6 +104,55 @@ window.addEventListener('load', function (ev) {
   // COMMON
   _common_common__WEBPACK_IMPORTED_MODULE_0__["default"].initLoad(); // MACROS
 
+  var initHamburger = function initHamburger() {
+    var btn = document.querySelector("[hamburger-js]"),
+        hideScrollContainer = document.querySelectorAll("html, body"),
+        mobileContainer = document.querySelector("[mobile-block-js]");
+    /**
+     * @description
+     */
+
+    btn.addEventListener("click", function (ev) {
+      var elem = ev.currentTarget;
+      elem.classList.toggle("is-active");
+
+      if (mobileContainer.classList.contains("is-open")) {
+        mobileContainer.classList.remove("is-open");
+        mobileContainer.classList.add("is-animated");
+        setTimeout(function () {
+          return mobileContainer.classList.remove("is-animated");
+        }, 300);
+      } else {
+        mobileContainer.classList.add("is-open");
+      }
+
+      hideScrollContainer.forEach(function (val, idx) {
+        val.classList.toggle("is-hideScroll");
+        val.classList.toggle("is-menuOpen");
+      });
+    });
+  };
+
+  var initMenu = function initMenu() {
+    $('.menu__btn').hover(function (ev) {
+      var el = $(ev.currentTarget),
+          elID = el.attr('data-id');
+
+      if ($(window).width() >= 768) {
+        $('.menu__btn').removeClass('is-hover');
+        el.addClass('is-hover');
+        $('.menu__content').hide();
+        $('.menu__content[data-content-id="' + elID + '"]').fadeIn(500);
+      }
+    }, function (ev) {});
+    $('.menu__link-wrapper').hover(function (ev) {}, function (ev) {
+      if ($(window).width() >= 768) {
+        $('.menu__btn').removeClass('is-hover');
+        $('.menu__content').hide();
+      }
+    });
+  };
+
   var reviewsCarousel = function reviewsCarousel() {
     new Swiper('.reviews__carousel .swiper', {
       autoplay: {
@@ -170,6 +219,8 @@ window.addEventListener('load', function (ev) {
     });
   };
 
+  initHamburger();
+  initMenu();
   reviewsCarousel();
   serviceCarousel();
   portfolioCarousel();
