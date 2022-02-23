@@ -5,11 +5,13 @@
   align-items: center;
 
   &.logo--header {
-    height: 70px;
+    @include adaptive(1023) {
+      height: 70px;
 
-    .logo {
-      &__btn {
-        height: 100%;
+      .logo {
+        &__btn {
+          height: 100%;
+        }
       }
     }
   }

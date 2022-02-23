@@ -1,0 +1,15 @@
+---
+title: FACE PROCEDURES
+
+pageClassName: p-face
+---
+extends shared/_layout
+
+block content
+  main.main(class!= pageClassName)
+
+    +mainSection('face', 'img-face-main-bg.jpg', 'FACE PROCEDURES', ['HOME', '|', 'SERVICES', '|', 'FACE PROCEDURES'])
+
+
+    include components/common/schedule
+    include components/common/patient-resources

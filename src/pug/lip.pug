@@ -1,0 +1,18 @@
+---
+title: Doctor Khronusova | Lip Fillers
+
+pageClassName: p-lip
+---
+extends shared/_layout
+
+block content
+  main.main(class!= pageClassName)
+
+    +mainSection('lip', 'img-lip-main-bg.jpg', 'Lip Fillers', ['HOME', '|', 'SERVICES', '|', 'LIP FILLERS'])
+
+
+    include components/common/schedule
+
+
+
+    include components/common/patient-resources

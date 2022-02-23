@@ -3,6 +3,16 @@
 .gallery {
   position: relative;
 
+  & + .schedule {
+    margin-top: 200px;
+    @include adaptive(1280) {
+      margin-top: 150px;
+    }
+    @include adaptive(767) {
+      margin-top: 100px;
+    }
+  }
+
   &__bg {
     z-index: 0;
     position: absolute;
